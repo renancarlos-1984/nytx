@@ -1,0 +1,168 @@
+
+/* GENERIC */
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    min-width: 304px;
+}
+
+div.cont {
+    margin: auto;
+    width: 100%;
+}
+
+a {
+    color: #000;
+}
+
+/* TOP BAR */
+
+div.logo-row {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#img-logo {
+    width: 250px;
+}
+
+div.top-menu-bar {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 0px 15px;
+    margin: 10px 0px;
+}
+
+div.top-menu-item {
+    width: 100%;
+    padding: 5px 3px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* OVERVIEW PAGE */
+
+div.query-title {
+    padding: 10px 0px;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    border-radius: 3px;
+}
+
+div.query-title svg {
+    padding: 0px 10px;
+    width: 30px;
+    height: 30px;
+}
+
+span.query-title-head {
+    font-weight: bold;
+    vertical-align: bottom;
+    font-size: 32px;
+} 
+
+div.each-category {
+    margin: 15px 0px;
+}
+
+a.list-title {
+    font-size: 14px;
+    background-color: #006;
+    color: #fff;
+    border-radius: 30px;
+    padding: 3px 15px;
+}
+
+div.books-list {
+    margin: 10px 0px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+div.book-display {
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+}
+
+div.book-img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+img.book-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+div.book-img div.book-rank {
+    position: absolute;
+    font-weight: bold;
+    font-size: 72px;
+    top: 50%;
+    left: 50%;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    transform: translate(-50%, -50%);
+}
+
+div.book-display span.book-title {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+div.each-book {
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+/* BOOKS LIST */
+
+div.query-subtitle {
+    border: 2px solid #006;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #006;
+    margin: auto;
+}
+
+div.cover-right {
+    text-align: right;
+    padding-right: 20px;
+}
+
+div.book-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+li.book-info {
+    list-style: none;
+}
+
+li.rank {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+li.title {
+    font-size: 20px;
+}
+
+li.author {
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+p.links-about {
+    text-align: center;
+}

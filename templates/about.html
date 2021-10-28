@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    About - NYT API
+{% endblock title %}
+
+{% block content %}
+
+<div class="cont">
+
+    <h2>About</h2>
+
+    <h3>The New York Times</h3>
+    <p>
+        The data in this website comes from a number of The New York Times databases.
+        Their access is granted through free and publicly available APIs.
+    </p>
+
+    <p class="links-about">
+        <a href="https://www.nyt.com/" target="new">Read the news at NYT.com</a><br />
+        <a href="https://developer.nytimes.com/" target="new">Register for the NYT APIs</a><br />
+        <a href="https://www.nytimes.com/subscription?campaignId=9YU8R&redirect_uri=https%3A%2F%2Fwww.nytimes.com%2F" target="new">Subscribe for NYT Unlimited Access</a>
+    </p>
+
+    <h3>The Web-App</h3>
+    <p>
+        I am building this web-app to expand my programming skills and knowledge,
+        more specifically about APIs (Application Programming Interface).
+    </p>
+    <p>
+        Throughout this journey, I will share the key takeaways so they may help
+        other people in their learning path.
+    </p>
+    <p>
+        This website has no commercial purposes.
+    </p>
+
+    <h4>Revision 0.1</h4>
+    <p>
+        Learned how this specific API expects the query requests messages to be written
+        so the engine can understand and process it. Understood how the replies are structured
+        and translated the API engine answer into readable data.
+    </p>
+
+</div>
+
+{% endblock content %}
