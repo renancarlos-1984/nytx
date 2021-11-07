@@ -1,4 +1,4 @@
-# nytx
+# nytx.herokuapp.com
 The New York Times API web-app
 
 To replicate this app locally:
@@ -13,5 +13,3 @@ To replicate this app locally:
 2 Makemigrations
 
 3 Migrate
-
-Follow the evolution of this app in nytx.herokuapp.com
