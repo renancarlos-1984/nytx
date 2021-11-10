@@ -5,7 +5,7 @@ from .models import BooksRequest
 API_KEY = os.environ.get('API_KEY_EVAR').strip()
 
 def RecordAPIQuery(url, reply):
-    query, error_message = url, ''
+    error_message = ''
     #check if it was faulty
     if('fault' in reply.keys()):
         status = 'FAULT'
@@ -15,10 +15,10 @@ def RecordAPIQuery(url, reply):
         if(status == 'ERROR'):
             error_message = reply['errors'][0]
     api_query = BooksRequest.objects.create(
-        query = query,
+        query = url,
         status = status,
-        error_message = error_message
-    )
+        error_message = error_message)
+    return None
 
 def GetLatestOverview():
     #Returns latest Overview 4 Top Best Sellers
