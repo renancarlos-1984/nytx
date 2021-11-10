@@ -1,5 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'pages/base.html' %}
 {% load static %}
+
+{% block specificstyle %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock specificstyle %}
 
 {% block title %}
     About - NYT API
@@ -10,6 +14,8 @@
 <div class="cont">
 
     <h2>About</h2>
+
+    {{ session }}
 
     <h3>The New York Times</h3>
     <p>
@@ -36,12 +42,10 @@
         This website has no commercial purposes.
     </p>
 
-    <h4>Revision 0.1</h4>
-    <p>
-        Learned how this specific API expects the query requests messages to be written
-        so the engine can understand and process it. Understood how the replies are structured
-        and translated the API engine answer into readable data.
-    </p>
+    {% for revision in revision_history %}
+    <h4>Revision {{revision.revision}}</h4>
+    {{revision.fulldescription|safe}}
+    {% endfor %}
 
 </div>
 

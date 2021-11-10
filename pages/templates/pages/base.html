@@ -5,13 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="google-site-verification" content="e_hzuqr7KBeM1jw5yNlvfs40HYA2BGRfPBwSWJvoCvI" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+    {% block specificstyle %}{% endblock specificstyle %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
 
-{% include 'topbar.html' %}
+{% include 'pages/topbar.html' %}
 
 {% block content %}
 {% endblock content %}

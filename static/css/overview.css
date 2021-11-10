@@ -1,0 +1,76 @@
+/* OVERVIEW PAGE */
+
+div.page-title {
+    margin: 10px 0px;
+}
+
+div.page-title-head {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #2ae;
+    padding: 6px 15px;
+    border-radius: 5px;
+    justify-content: center;
+    margin-bottom: 5px;
+} 
+
+div.book-overview-category {
+    margin: 15px 0px;
+}
+
+a.category-title {
+    font-size: 16px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+
+div.books-hr-list {
+    margin: 10px 0px;
+    max-height: 210px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+div.each-book-ranked {
+    max-width: 150px;
+    margin: 5px auto;
+}
+
+div.book-overview-display {
+    display: inline-flex;
+    justify-content: center;
+    width: 150px;
+}
+
+div.book-img-overview {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+img.book-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+div.book-rank-over {
+    position: absolute;
+    font-weight: bold;
+    font-size: 72px;
+    top: 50%;
+    left: 50%;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    transform: translate(-50%, -50%);
+}
+
+div.book-title-below {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}

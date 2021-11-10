@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from books import GetLatestOverview, GetLatestList
+from .books_api_functions import GetLatestOverview, GetLatestList
 
 def BooksOverview(request):
     template_name = 'books/books_overview.html'

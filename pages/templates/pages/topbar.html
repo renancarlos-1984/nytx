@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="cont">
+    <div class="logo-row">
+            <a href="{% url 'home' %}">        
+                <img id="img-logo" src="{% static 'img/nyt-logo-api2.png' %}">
+            </a>      
+    </div>
+    <div class="top-menu-bar">
+        <div class="top-menu-item left">
+            <a class="menu-button" href="{% url 'books:books_overview' %}">Best Seller Books</a>
+        </div>
+        <div class="top-menu-item right">
+            <a class="menu-button" href="{% url 'pages:about' %}">About</a>
+        </div>  
+    </div>
+</div>

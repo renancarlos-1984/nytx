@@ -1,0 +1,43 @@
+/* CATEGORY LIST PAGE */
+
+div.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+div.each-book {
+    margin: 10px auto;
+    justify-content: center;
+    width: 300px;
+    display: inline-flex;
+}
+
+div.cover-display {
+    text-align: center;
+    width: 50%;
+}
+
+img.book-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+div.book-info {
+    vertical-align: top;
+    width: 50%;
+    list-style: none;
+}
+
+li.rank {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+li.title {
+    font-size: 20px;
+}
+
+li.author {
+    font-size: 14px;
+}
