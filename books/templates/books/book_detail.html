@@ -1,0 +1,99 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block specificstyle %}
+    <link rel="stylesheet" href="{% static 'css/bookdetail.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bookslist.css' %}" />
+{% endblock specificstyle %}
+
+{% block title %}
+    Best Seller Books - NYT API
+{% endblock title %}
+
+{% block content %}
+
+<div class="cont">
+
+    <div class="page-title">    
+        <div class="page-title-head">
+            <a class="no-deco" href="{% url 'books:books_overview' %}">
+                Best Seller Books
+            </a>
+        </div> 
+        <div class="page-title-head">
+            <a class="no-deco" href="{% url 'books:books_list' book_cat %}">
+                {{ display_cat }}
+            </a>            
+        </div>
+    </div>   
+
+    <div class="book-details sp100" id="main-book">
+        <div class="col sp100 mb-15">
+            <div class="book-title" id="main-title">{{book.title|title}}</div>
+            <div class="book-author" id="main-author">by {{book.author}}</div>
+        </div>
+        <div class="book-card">
+            <div class="col center">
+                <img class="book-cover cover-big" id="main-cover" src="{{book.book_image}}" />
+            </div>
+            <div class="col">
+                <div class="text" id="main-desc">{{book.description}}</div>
+                <hr />
+                <div class="text" id="main-rank">
+                    Rank: {{book.rank}}<br />
+                    Weeks on List: {{book.weeks_on_list}}
+                </div>
+                <hr />
+                Buy on:<br />
+                {% for buy in book.buy_links %}
+                        <a href="{{buy.url}}" target="new">{{buy.name}}</a><br />
+                {% endfor %}            
+                <hr />
+                {% for isbn in book.isbns %}
+                    {% for key, value in isbn.items %}
+                        {{key|title}}: {{value}}<br />
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div>
+        More from {{ display_cat }}...
+        <div class="books-list">
+
+            {% for item in latest_list.results.books %}
+            {% if item.title != book.title %}
+            <div class="each-book">
+                <div class="cover-display">
+                    <a href="{% url 'books:book_detail' latest_list.results.list_name_encoded item.title %}">
+                        <img class="book-cover" src="{{item.book_image}}"
+                        title="{{item.title|title}}, by {{item.author}}" />
+                    </a>
+                </div>
+                <div class="book-info">
+                    <li class="book-infolist rank">#{{item.rank}}</li>
+                    <a class="no-deco" href="{% url 'books:book_detail' latest_list.results.list_name_encoded item.title %}">
+                        <li class="book-infolist title">{{item.title|title|truncatechars:50}}</li>
+                    </a>
+                    <li class="book-infolist author" id="panel{{item.rank}}">
+                            by {{item.author|truncatechars:36}}
+                    </li>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}
+
+{% block javascript %}
+<script type="text/javascript" src="{% static 'js/bookdetail.js' %}"></script>
+{% endblock javascript %}

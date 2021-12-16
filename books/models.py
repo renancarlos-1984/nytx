@@ -9,3 +9,9 @@ class BooksRequest(models.Model):
 
     def __str__(self):
         return self.query
+
+'''
+Store Book API results to avoid Rate limit quota
+Each successfull result will have a expirity time
+Starting with 10 minutes for all queries
+'''

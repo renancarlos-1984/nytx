@@ -17,12 +17,6 @@ div.cover-display {
     width: 50%;
 }
 
-img.book-cover {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-}
-
 div.book-info {
     vertical-align: top;
     width: 50%;

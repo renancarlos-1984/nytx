@@ -14,8 +14,16 @@
 <div class="cont">
 
     <div class="page-title">
-        <div class="page-title-head">Best Seller Books</div> 
-        <div class="page-title-head">{{ latest_list.results.display_name }}</div>
+        <div class="page-title-head">
+            <a class="no-deco" href="{% url 'books:books_overview' %}">
+                Best Seller Books
+            </a>
+        </div>
+        <div class="page-title-head">
+            <a class="no-deco" href="{% url 'books:books_list' latest_list.results.list_name_encoded %}">
+                {{ latest_list.results.display_name }}
+            </a>            
+        </div>
     </div>   
 
     <div class="books-list">
@@ -24,13 +32,17 @@
 
         <div class="each-book">
             <div class="cover-display">
-                <img class="book-cover" src="{{item.book_image}}"
-                title="{{item.title|title}}, by {{item.author}}" />
+                <a href="{% url 'books:book_detail' latest_list.results.list_name_encoded item.title %}">
+                    <img class="book-cover" src="{{item.book_image}}"
+                    title="{{item.title|title}}, by {{item.author}}" />
+                </a>
             </div>
             <div class="book-info">
-                <li class="book-infolist rank">#{{item.rank}} </li>
-                <li class="book-infolist title">{{item.title|title|truncatechars:50}}</li>
-                <li class="book-infolist author">by {{item.author|truncatechars:36}}</li>           
+                <li class="book-infolist rank">#{{item.rank}}</li>
+                <a class="no-deco" href="{% url 'books:book_detail' latest_list.results.list_name_encoded item.title %}">
+                    <li class="book-infolist title">{{item.title|title|truncatechars:50}}</li>
+                </a>
+                <li class="book-infolist author">by {{item.author|truncatechars:36}}</li>
             </div>
         </div>
 

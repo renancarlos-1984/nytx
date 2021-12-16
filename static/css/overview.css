@@ -1,20 +1,5 @@
 /* OVERVIEW PAGE */
 
-div.page-title {
-    margin: 10px 0px;
-}
-
-div.page-title-head {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 16px;
-    background-color: #2ae;
-    padding: 6px 15px;
-    border-radius: 5px;
-    justify-content: center;
-    margin-bottom: 5px;
-} 
-
 div.book-overview-category {
     margin: 15px 0px;
 }

@@ -9,11 +9,59 @@ a {
     color: #000;
 }
 
+a.no-deco {
+    text-decoration: none;
+}
+
 div.cont {
     margin: auto;
     width: 100%;
     min-width: 304px;
     max-width: 900px;
+}
+
+div.col {
+    display: inline-block;
+}
+
+div.top {
+    vertical-align: top;
+}
+
+div.auto {
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+div.sp10 {width: 10%}
+div.sp20 {width: 20%;}
+div.sp25 {width: 25%;}
+div.sp30 {width: 30%;}
+div.sp33 {width: 33.33%;}
+div.sp40 {width: 40%;}
+div.sp50 {width: 50%;}
+div.sp60 {width: 60%;}
+div.sp66 {width: 66.66%;}
+div.sp70 {width: 70%;}
+div.sp75 {width: 75%}
+div.sp80 {width: 80%;}
+div.sp90 {width: 90%;}
+div.sp100 {width: 100%;}
+
+div.mb-15 {margin-bottom: 15px;}
+
+img.book-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    justify-content: center;
+}
+
+div.text {
+    display: inline-block;
 }
 
 /* TOP BAR */
@@ -61,10 +109,10 @@ div.page-title {
 div.page-title-head {
     display: inline-block;
     font-weight: bold;
-    font-size: 16px;
-    background-color: #2ae;
-    padding: 6px 15px;
-    border-radius: 5px;
+    font-size: 12px;
+    background: #bbd3fa;
+    padding: 5px 12px;
+    border-radius: 4px;
     justify-content: center;
     margin-bottom: 5px;
-} 
+}

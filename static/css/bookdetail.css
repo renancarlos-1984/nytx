@@ -1,0 +1,26 @@
+div.book-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2209e9;
+}
+
+div.book-author {
+    font-size: 20px;
+}
+
+img.cover-big {
+    width: 240px;
+    height: 360px;
+}
+
+div.book-card {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 100%;
+    width: 95%;
+    margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+    div.book-card {grid-template-columns: 1fr 2fr;}
+}

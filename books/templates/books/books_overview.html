@@ -14,7 +14,11 @@
 <div class="cont">
 
     <div class="page-title">
-        <div class="page-title-head">Best Seller Books</div>
+        <div class="page-title-head">
+            <a class="no-deco" href="{% url 'books:books_overview' %}">
+                Best Seller Books
+            </a>        
+        </div> 
     </div>
     
     {% for item in latest_overview.results.lists %}
@@ -29,13 +33,19 @@
             {% for book in item.books %}
             <div class="each-book-ranked">
                 <div class="book-overview-display">
-                    <div class="book-img-overview">
-                        <img class="book-cover" src="{{book.book_image}}"
-                            title="{{book.title|title}}, by {{book.author}}" />
-                        <div class="book-rank-over">#{{book.rank}}</div>
-                    </div>
+                    <a href="{% url 'books:book_detail' item.list_name_encoded book.title %}">
+                        <div class="book-img-overview">
+                            <img class="book-cover" src="{{book.book_image}}"
+                                title="{{book.title|title}}, by {{book.author}}" />
+                            <div class="book-rank-over">#{{book.rank}}</div>
+                        </div>
+                    </a>
                 </div>
-                <div class="book-title-below">{{book.title|title|truncatechars:23}}</div>
+                <div class="book-title-below">
+                    <a class="no-deco" href="{% url 'books:book_detail' item.list_name_encoded book.title %}">
+                        {{book.title|title|truncatechars:23}}
+                    </a>
+                </div>
             </div>
             {% endfor %}
         </div>
